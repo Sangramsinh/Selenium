@@ -1,0 +1,16 @@
+package actions.login_Page_Action;
+
+import org.openqa.selenium.WebDriver;
+
+public class Login_Page_Action {
+	
+	public WebDriver driver = null;
+	
+	public Login_Page_Action(WebDriver driver){
+		
+	}
+	void verifyLoginPageTitle(){
+		
+	}
+
+}

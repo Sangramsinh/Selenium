@@ -1,0 +1,27 @@
+package commonMethods;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class GetPropertyValue {
+	String value = "";
+	InputStream inputStream = null;
+	
+	public String getPropertyValues(String fileName,String keyToSearch){
+		
+		try {
+			Properties prop = new Properties();
+			
+			inputStream = new FileInputStream(fileName);
+			
+			prop.load(inputStream);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return value;
+	}
+	
+}

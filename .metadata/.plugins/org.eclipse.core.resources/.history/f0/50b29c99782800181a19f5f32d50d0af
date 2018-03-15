@@ -1,0 +1,17 @@
+package commonMethods;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeTest;
+
+public class BaseClass {
+
+	public WebDriver driver = null;
+	String browserName = null;
+	String baseURL = null;
+	GetPropertyValue getPropValue = new GetPropertyValue();
+	
+	@BeforeTest
+	public void initializeBrowser(){
+		
+	}
+}

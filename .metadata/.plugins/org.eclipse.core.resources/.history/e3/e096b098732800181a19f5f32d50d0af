@@ -1,0 +1,11 @@
+package commonMethods;
+
+import org.testng.annotations.BeforeTest;
+
+public class BaseClass {
+
+	@BeforeTest
+	public void initializeBrowser(){
+		
+	}
+}

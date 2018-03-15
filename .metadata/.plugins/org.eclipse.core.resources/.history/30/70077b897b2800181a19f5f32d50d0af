@@ -1,0 +1,10 @@
+package verifications.loginPageVerification;
+
+import org.openqa.selenium.WebDriver;
+
+public class Login_Page_Verification {
+
+	public Login_Page_Verification(WebDriver driver){
+		this.driver = driver;
+	}
+}

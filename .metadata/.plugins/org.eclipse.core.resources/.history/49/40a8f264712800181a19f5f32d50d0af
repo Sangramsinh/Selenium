@@ -1,0 +1,9 @@
+package commonMethods;
+
+public class BaseClass {
+
+	@BeforeTest
+	public void initializeBrowser(){
+		
+	}
+}

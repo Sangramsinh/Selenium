@@ -1,0 +1,12 @@
+package commonMethods;
+
+import org.openqa.selenium.WebDriver;
+
+public class GetPropertyValue {
+	String value = "";
+	
+	public String getPropertyValues(String fileName,String keyToSearch){
+		return value;
+	}
+	
+}

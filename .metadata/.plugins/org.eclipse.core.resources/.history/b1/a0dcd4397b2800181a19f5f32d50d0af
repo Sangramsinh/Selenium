@@ -1,0 +1,11 @@
+package tests.login_Page_Test;
+
+import org.testng.annotations.Test;
+
+import commonMethods.BaseClass;
+
+public class Login_Page_Test extends BaseClass {
+  @Test
+  public void f() {
+  }
+}
