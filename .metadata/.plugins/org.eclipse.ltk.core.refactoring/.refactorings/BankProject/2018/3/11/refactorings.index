@@ -2,3 +2,8 @@
 1521132548909	Rename package 'tests.Home_Page_Test'
 1521132554700	Move package
 1521137003579	Rename type 'NewTest'
+1521139782930	Move package
+1521141340262	Rename package 'commonMethods'
+1521143021592	Delete element
+1521143074792	Move package
+1521144308281	Rename package 'locators.login_Page_Locators'

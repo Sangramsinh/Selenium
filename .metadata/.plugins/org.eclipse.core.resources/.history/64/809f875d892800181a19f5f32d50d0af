@@ -1,0 +1,8 @@
+package locators.login_Page_Locators;
+
+import org.testng.annotations.Test;
+
+public class Login_Page_Locators {
+  
+	
+}

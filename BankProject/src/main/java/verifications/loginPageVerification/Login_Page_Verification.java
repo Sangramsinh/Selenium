@@ -2,6 +2,8 @@ package verifications.loginPageVerification;
 
 import org.openqa.selenium.WebDriver;
 
+import actions.login_Page_Action.Login_Page_Action;
+
 public class Login_Page_Verification {
 
 	public WebDriver driver = null;
@@ -14,7 +16,8 @@ public class Login_Page_Verification {
 	public void verifyLogin(){
 		loginPA = new Login_Page_Action(driver);
 		loginPA.verifyLoginPageTitle();
-		
+		loginPA.verifyUserNameIsNull();
+		loginPA.enterUserName();
 	}
 	
 }

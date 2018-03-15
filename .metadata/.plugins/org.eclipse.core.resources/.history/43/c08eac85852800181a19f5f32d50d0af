@@ -1,0 +1,11 @@
+package commonMethods;
+
+import org.openqa.selenium.WebElement;
+
+public class WebTextBox {
+	
+	public static enterKeys(WebElement ele,String valueToEnter){
+		
+	}
+
+}
