@@ -32,4 +32,8 @@ public class Login_Page_Locator {
 		return password;
 	}
 	
+	public WebElement getLoginButton(){
+		return loginButton;
+	}
+	
 }

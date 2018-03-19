@@ -1,0 +1,12 @@
+package verifications.home_Page_Verification;
+
+import org.openqa.selenium.WebDriver;
+
+public class Home_Page_Verification {
+
+	WebDriver driver = null;
+	
+	public Home_Page_Verification(WebDriver driver){
+		this.driver = driver;
+	}
+}

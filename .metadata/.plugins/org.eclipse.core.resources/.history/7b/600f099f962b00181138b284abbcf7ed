@@ -1,0 +1,12 @@
+package actions.home_Page_Action;
+
+import org.openqa.selenium.WebDriver;
+
+public class Home_Page_Action {
+	WebDriver driver = null;
+	
+	public Home_Page_Action(WebDriver driver){
+		this.driver = driver;
+	}
+
+}
