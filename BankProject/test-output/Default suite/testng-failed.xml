@@ -5,11 +5,11 @@
     <classes>
       <class name="tests.login_Page_Test.Login_Page_Test">
         <methods>
-          <include name="successfullLogin"/>
           <include name="goToURL"/>
           <include name="afterMethod"/>
           <include name="initializeBrowser"/>
           <include name="closeBrowser"/>
+          <include name="unsuccessfullLoginInvalidUserName"/>
         </methods>
       </class> <!-- tests.login_Page_Test.Login_Page_Test -->
     </classes>

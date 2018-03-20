@@ -1,8 +1,12 @@
 package actions.login_Page_Action;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import commonMethods.WebTextBox;
@@ -16,6 +20,7 @@ public class Login_Page_Action {
 	WebElement ele = null;
 	GetPropertyValue getPropValue = new GetPropertyValue();
 	Login_Page_Locator loginPL = null;
+	WebDriverWait wait = null;
 	
 	public Login_Page_Action(WebDriver driver){
 		this.driver = driver;
@@ -85,4 +90,35 @@ public class Login_Page_Action {
 			ele.click();
 		}
 	}
+	
+	public void enterInvalidUserName(){
+		loginPL = PageFactory.initElements(driver, Login_Page_Locator.class);
+		ele = loginPL.getUserName();
+		
+		if(ele != null){
+			WebTextBox.enterKeys(ele, getPropValue.getPropertyValues(fileName, "invalidUserName"));
+		}
+	}
+	
+	public void enterInvalidPassword(){
+		loginPL = PageFactory.initElements(driver, Login_Page_Locator.class);
+		ele = loginPL.getPassword();
+		
+		if(ele != null){
+			WebTextBox.enterKeys(ele, getPropValue.getPropertyValues(fileName, "invalidPassword"));
+		}
+	}
+	
+	public void handleAlert(){
+		Alert alert = driver.switchTo().alert();
+		
+		Assert.assertEquals(alert.getText(), getPropValue.getPropertyValues(fileName, "loginPageAlert"));
+		
+		alert.accept();
+		
+		wait = new WebDriverWait(driver, 30);
+		
+		wait.until(
+		          webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+		}
 }

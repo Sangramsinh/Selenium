@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\hp\AppData\Local\Temp\testng-eclipse--316369928\testng-customsuite.xml</span>
+                    <span>C:\Users\hp\AppData\Local\Temp\testng-eclipse--1387149415\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,21 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.login_Page_Test.Login_Page_Test" hash-for-method="successfullLogin">successfullLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.login_Page_Test.Login_Page_Test" hash-for-method="unsuccessfullLoginInvalidPassword">unsuccessfullLoginInvalidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.login_Page_Test.Login_Page_Test" hash-for-method="unsuccessfullLoginInvalidUserName">unsuccessfullLoginInvalidUserName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.login_Page_Test.Login_Page_Test" hash-for-method="unsuccessfullLoginInvalidUserNameAndPassword">unsuccessfullLoginInvalidUserNameAndPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -130,12 +145,33 @@
                   <span class="method-name">successfullLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="unsuccessfullLoginInvalidPassword">
+                  </a> <!-- unsuccessfullLoginInvalidPassword -->
+                  <span class="method-name">unsuccessfullLoginInvalidPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="unsuccessfullLoginInvalidUserName">
+                  </a> <!-- unsuccessfullLoginInvalidUserName -->
+                  <span class="method-name">unsuccessfullLoginInvalidUserName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="unsuccessfullLoginInvalidUserNameAndPassword">
+                  </a> <!-- unsuccessfullLoginInvalidUserNameAndPassword -->
+                  <span class="method-name">unsuccessfullLoginInvalidUserNameAndPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\hp\AppData\Local\Temp\testng-eclipse--316369928\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\hp\AppData\Local\Temp\testng-eclipse--1387149415\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -184,16 +220,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'successfullLogin')
 data.setCell(0, 2, 'tests.login_Page_Test.Login_Page_Test')
-data.setCell(0, 3, 37611);
+data.setCell(0, 3, 5226);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'unsuccessfullLoginInvalidUserName')
+data.setCell(1, 2, 'tests.login_Page_Test.Login_Page_Test')
+data.setCell(1, 3, 3719);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'unsuccessfullLoginInvalidPassword')
+data.setCell(2, 2, 'tests.login_Page_Test.Login_Page_Test')
+data.setCell(2, 3, 3179);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'unsuccessfullLoginInvalidUserNameAndPassword')
+data.setCell(3, 2, 'tests.login_Page_Test.Login_Page_Test')
+data.setCell(3, 3, 3168);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 37 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -226,19 +274,55 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">goToURL</span>
-                <span class="method-start">7794 ms</span>
+                <span class="method-start">40925 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">successfullLogin</span>
-                <span class="method-start">21643 ms</span>
+                <span class="method-start">44997 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">59256 ms</span>
+                <span class="method-start">50226 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">goToURL</span>
+                <span class="method-start">50228 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">unsuccessfullLoginInvalidUserName</span>
+                <span class="method-start">52391 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">56111 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">goToURL</span>
+                <span class="method-start">56112 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">unsuccessfullLoginInvalidPassword</span>
+                <span class="method-start">58294 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">61475 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">goToURL</span>
+                <span class="method-start">61475 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">unsuccessfullLoginInvalidUserNameAndPassword</span>
+                <span class="method-start">65400 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod</span>
+                <span class="method-start">68569 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">59324 ms</span>
+                <span class="method-start">68602 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

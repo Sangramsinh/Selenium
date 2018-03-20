@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="51498" started-at="2018-03-19T17:14:28Z" finished-at="2018-03-19T17:15:19Z">
+  <suite name="Default suite" duration-ms="27663" started-at="2018-03-20T19:02:08Z" finished-at="2018-03-20T19:02:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="51498" started-at="2018-03-19T17:14:28Z" finished-at="2018-03-19T17:15:19Z">
+    <test name="Default test" duration-ms="27663" started-at="2018-03-20T19:02:08Z" finished-at="2018-03-20T19:02:35Z">
       <class name="tests.login_Page_Test.Login_Page_Test">
-        <test-method status="PASS" signature="initializeBrowser()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="initializeBrowser" is-config="true" duration-ms="7761" started-at="2018-03-19T22:44:20Z" finished-at="2018-03-19T22:44:28Z">
+        <test-method status="PASS" signature="initializeBrowser()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="initializeBrowser" is-config="true" duration-ms="40905" started-at="2018-03-21T00:31:27Z" finished-at="2018-03-21T00:32:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeBrowser -->
-        <test-method status="PASS" signature="goToURL()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="goToURL" is-config="true" duration-ms="13849" started-at="2018-03-19T22:44:28Z" finished-at="2018-03-19T22:44:42Z">
+        <test-method status="PASS" signature="goToURL()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="goToURL" is-config="true" duration-ms="4072" started-at="2018-03-21T00:32:08Z" finished-at="2018-03-21T00:32:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToURL -->
-        <test-method status="PASS" signature="successfullLogin()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="successfullLogin" duration-ms="37611" started-at="2018-03-19T22:44:42Z" finished-at="2018-03-19T22:45:19Z">
+        <test-method status="PASS" signature="successfullLogin()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="successfullLogin" duration-ms="5226" started-at="2018-03-21T00:32:12Z" finished-at="2018-03-21T00:32:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfullLogin -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-03-19T22:45:19Z" finished-at="2018-03-19T22:45:19Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-03-21T00:32:17Z" finished-at="2018-03-21T00:32:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="closeBrowser" is-config="true" duration-ms="1" started-at="2018-03-19T22:45:20Z" finished-at="2018-03-19T22:45:20Z">
+        <test-method status="PASS" signature="goToURL()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="goToURL" is-config="true" duration-ms="2163" started-at="2018-03-21T00:32:17Z" finished-at="2018-03-21T00:32:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToURL -->
+        <test-method status="PASS" signature="unsuccessfullLoginInvalidUserName()[pri:1, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="unsuccessfullLoginInvalidUserName" duration-ms="3719" started-at="2018-03-21T00:32:19Z" finished-at="2018-03-21T00:32:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unsuccessfullLoginInvalidUserName -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-03-21T00:32:23Z" finished-at="2018-03-21T00:32:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="goToURL()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="goToURL" is-config="true" duration-ms="2182" started-at="2018-03-21T00:32:23Z" finished-at="2018-03-21T00:32:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToURL -->
+        <test-method status="PASS" signature="unsuccessfullLoginInvalidPassword()[pri:2, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="unsuccessfullLoginInvalidPassword" duration-ms="3179" started-at="2018-03-21T00:32:25Z" finished-at="2018-03-21T00:32:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unsuccessfullLoginInvalidPassword -->
+        <test-method status="PASS" signature="goToURL()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="goToURL" is-config="true" duration-ms="3925" started-at="2018-03-21T00:32:28Z" finished-at="2018-03-21T00:32:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToURL -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-03-21T00:32:28Z" finished-at="2018-03-21T00:32:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="unsuccessfullLoginInvalidUserNameAndPassword()[pri:3, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="unsuccessfullLoginInvalidUserNameAndPassword" duration-ms="3168" started-at="2018-03-21T00:32:32Z" finished-at="2018-03-21T00:32:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unsuccessfullLoginInvalidUserNameAndPassword -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-03-21T00:32:35Z" finished-at="2018-03-21T00:32:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:tests.login_Page_Test.Login_Page_Test@7823a2f9]" name="closeBrowser" is-config="true" duration-ms="2539" started-at="2018-03-21T00:32:35Z" finished-at="2018-03-21T00:32:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

@@ -29,4 +29,38 @@ public class Login_Page_Verification {
 		return homePV;
 	}
 	
+	public void verifyInvalidUserName(){
+		loginPA = new Login_Page_Action(driver);
+		loginPA.verifyUserNameIsNull();
+		loginPA.enterInvalidUserName();
+		loginPA.verifyPasswordIsNull();
+		loginPA.enterPassword();
+		loginPA.verifyPassword();
+		loginPA.loginButtonClick();
+		loginPA.handleAlert();
+		loginPA.verifyLoginPageTitle();
+	}
+	
+	public void verifyInvalidPassword(){
+		loginPA = new Login_Page_Action(driver);
+		loginPA.verifyUserNameIsNull();
+		loginPA.enterUserName();
+		loginPA.verifyUserName();
+		loginPA.verifyPasswordIsNull();
+		loginPA.enterInvalidPassword();
+		loginPA.loginButtonClick();
+		loginPA.handleAlert();
+		loginPA.verifyLoginPageTitle();
+	}
+	
+	public void verifyInvalidUserNameAndPassword(){
+		loginPA = new Login_Page_Action(driver);
+		loginPA.verifyUserNameIsNull();
+		loginPA.enterInvalidPassword();
+		loginPA.verifyPasswordIsNull();
+		loginPA.enterInvalidPassword();
+		loginPA.loginButtonClick();
+		loginPA.handleAlert();
+		loginPA.verifyLoginPageTitle();
+	}	
 }
