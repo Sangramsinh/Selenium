@@ -6,9 +6,10 @@ import org.testng.Assert;
 import componentFunctions.GetPropertyValue;
 
 public class Home_Page_Action {
-	WebDriver driver = null;
+	public WebDriver driver = null;
 	GetPropertyValue getPropValue = new GetPropertyValue();
-	String fileName = "config.properties"; 
+	//String fileName = "config.properties";
+	String fileName = "TestData.xlsx";
 			
 	public Home_Page_Action(WebDriver driver){
 		this.driver = driver;

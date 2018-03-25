@@ -1,0 +1,55 @@
+package tests.login_Page_Test;
+
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+import componentFunctions.BaseClass;
+import verifications.home_Page_Verification.Home_Page_Verification;
+import verifications.loginPageVerification.Login_Page_Verification;
+
+public class Login_Page_Test extends BaseClass {
+  Login_Page_Verification loginPV = null;
+  /*
+@Test(priority = 0)
+  public void successfullLogin() {
+		loginPV = new Login_Page_Verification(driver);
+		Home_Page_Verification homePV =  loginPV.verifyLogin();
+		
+		homePV.verifyHomePageTitle();
+  }
+	
+	@Test(priority = 1)
+	public void unsuccessfullLoginInvalidUserName() {
+		loginPV = new Login_Page_Verification(driver);
+		loginPV.verifyInvalidUserName();
+	}
+	
+	@Test(priority = 2)
+	public void unsuccessfullLoginInvalidPassword(){
+		loginPV = new Login_Page_Verification(driver);
+		loginPV.verifyInvalidPassword();
+	}
+	
+	@Test(priority = 3)
+	public void unsuccessfullLoginInvalidUserNameAndPassword(){
+		loginPV = new Login_Page_Verification(driver);
+		loginPV.verifyInvalidUserNameAndPassword();
+	}
+	*/
+	@Test(priority = 4)
+	@Parameters({"username","password"})
+	public void successfullLoginWithParameters(@Optional("Sangram") String username,String password){
+		loginPV = new Login_Page_Verification(driver);
+		System.out.println("UN PW"+username+password);
+		loginPV.verifyLoginWithParameters(username,password);
+	}
+	
+	@Test(priority = 5,name="credenials",dataProviderClass=DataProviderClass.class)
+	public void successfullLoginWithDataProvider(@Optional("Sangram") String username,String password){
+		loginPV = new Login_Page_Verification(driver);
+		System.out.println("UN PW"+username+password);
+		loginPV.verifyLoginWithParameters(username,password);
+	}
+}

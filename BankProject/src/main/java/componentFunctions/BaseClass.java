@@ -13,7 +13,8 @@ public class BaseClass {
 	public WebDriver driver = null;
 	String browserName = null;
 	String baseURL = null;
-	String fileName = "config.properties";
+	//String fileName = "config.properties";
+	String fileName = "TestData.xlsx";
 	GetPropertyValue getPropValue = new GetPropertyValue();
 	
 	@BeforeSuite
@@ -27,7 +28,7 @@ public class BaseClass {
 	public void goToURL(){
 		baseURL = getPropValue.getPropertyValues(fileName, "baseURL");
 		driver.get(baseURL);
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
 	@AfterMethod

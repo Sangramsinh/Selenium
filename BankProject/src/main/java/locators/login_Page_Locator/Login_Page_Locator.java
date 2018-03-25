@@ -23,6 +23,9 @@ public class Login_Page_Locator {
 	
 	@FindBy(name = "btnReset")
 	WebElement resetButton;
+	
+	@FindBy(xpath = ".//tbody/tr[3]/td")
+	WebElement managerID;
 
 	public WebElement getUserName() {
 		return userName;
@@ -36,4 +39,7 @@ public class Login_Page_Locator {
 		return loginButton;
 	}
 	
+	public WebElement getManagerID(){
+		return managerID;
+	}
 }

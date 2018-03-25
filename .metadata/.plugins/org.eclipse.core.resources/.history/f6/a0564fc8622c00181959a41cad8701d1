@@ -1,7 +1,0 @@
-browserName=firefox
-baseURL=http://www.demo.guru99.com/v4/
-loginPageTitle=Guru99 Bank Home Page
-userName=mngr122053
-password=sEzusev
-homePageTitle=Guru99 Bank Manager HomePage
-fireFoxFilePath= C:\Program Files (x86)\Mozilla Firefox
