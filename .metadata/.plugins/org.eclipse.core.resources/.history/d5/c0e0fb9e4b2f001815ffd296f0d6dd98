@@ -1,0 +1,63 @@
+package tests.home_Page_Test;
+
+import java.beans.EventHandler;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+
+import com.crm.qa.util.WebEventListener;
+import com.crm.qa.util.WebEventlistener;
+
+public class Base {
+	
+	public static WebDriver driver;
+	public static EventFiringWebDriver e_driver;
+	public static WebEventlistener eventlistener;
+	String url = "https://www.freecrm.com/index.html";
+	String browser = "firefox";	
+	
+	public void init(){
+		selectBrowser(browser);
+		getUrl(url);
+		
+		}
+	
+	public void selectBrowser(String Browser){
+		if(browser.equalsIgnoreCase("firefox")){
+			System.setProperty("webdriver.gecko.driver",
+					"C:\\Users\\Mahi\\Downloads\\drivers\\drivers\\geckodriver-v0.16.0-win64\\geckodriver.exe");
+		//	log.info("creating object of "+browser);
+			WebDriver driver = new FirefoxDriver();
+			 e_driver = new EventFiringWebDriver(driver);
+				eventlistener = new WebEventlistener();
+				e_driver.register(eventlistener);
+				driver= e_driver;
+			
+			
+				
+		}
+		
+		
+	}
+	
+	
+	public void getUrl(String url){
+	
+		
+		
+		driver.get(url);
+	//	driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			
+	}
+
+	public void closeBrowser(){
+		//driver.quit();
+		
+	}	
+	}

@@ -4,7 +4,16 @@
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="BankProject"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
-<mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
+<mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS">
+<mapEntry key="actions.login_Page_Action.Login_Page_Action" value=""/>
+<mapEntry key="commonMethods.WebTextBox" value=""/>
+<mapEntry key="componentFunctions.BaseClass" value=""/>
+<mapEntry key="componentFunctions.GetPropertyValue" value=""/>
+<mapEntry key="componentFunctions.LocalDriverFactory" value=""/>
+<mapEntry key="locators.login_Page_Locator.Login_Page_Locator" value=""/>
+<mapEntry key="tests.login_Page_Test.Login_Page_Test" value=""/>
+<mapEntry key="verifications.loginPageVerification.Login_Page_Verification" value=""/>
+</mapAttribute>
 <listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
 <listEntry value="tests.login_Page_Test.Login_Page_Test"/>
 <listEntry value="verifications.loginPageVerification.Login_Page_Verification"/>
@@ -15,8 +24,14 @@
 <listEntry value="locators.login_Page_Locator.Login_Page_Locator"/>
 <listEntry value="componentFunctions.GetPropertyValue"/>
 </listAttribute>
+<booleanAttribute key="org.testng.eclipse.DEBUG" value="false"/>
+<listAttribute key="org.testng.eclipse.GROUP_LIST"/>
+<listAttribute key="org.testng.eclipse.GROUP_LIST_CLASS"/>
+<stringAttribute key="org.testng.eclipse.LOG_LEVEL" value="2"/>
 <listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
 <listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>
 <stringAttribute key="org.testng.eclipse.PRE_DEFINED_LISTENERS" value=""/>
+<stringAttribute key="org.testng.eclipse.PROTOCOL" value="json"/>
 <intAttribute key="org.testng.eclipse.TYPE" value="1"/>
+<booleanAttribute key="org.testng.eclipse.VERBOSE" value="false"/>
 </launchConfiguration>

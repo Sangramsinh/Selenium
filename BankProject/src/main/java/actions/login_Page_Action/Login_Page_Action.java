@@ -1,7 +1,9 @@
 package actions.login_Page_Action;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -16,17 +18,18 @@ import locators.login_Page_Locator.Login_Page_Locator;
 public class Login_Page_Action {
 	
 	public WebDriver driver = null;
-	String fileName = "config.properties";
+	//String fileName = "config.properties";
+	String fileName = "TestData.xlsx";
 	WebElement ele = null;
 	GetPropertyValue getPropValue = new GetPropertyValue();
 	Login_Page_Locator loginPL = null;
-	WebDriverWait wait = null;
 	
 	public Login_Page_Action(WebDriver driver){
 		this.driver = driver;
 	}
 	
 	public void verifyLoginPageTitle(){
+		
 		Assert.assertEquals(driver.getTitle(), getPropValue.getPropertyValues(fileName, "loginPageTitle"));
 		System.out.println("Login page verified");
 	}
@@ -116,9 +119,46 @@ public class Login_Page_Action {
 		
 		alert.accept();
 		
-		wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, 15); 
+		wait.until(ExpectedConditions.titleContains(getPropValue.getPropertyValues(fileName, "loginPageTitle")));	
 		
-		wait.until(
-		          webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
 		}
+	
+	public void verifyManagerID(){
+		loginPL = PageFactory.initElements(driver, Login_Page_Locator.class);
+		
+		ele = loginPL.getManagerID();
+		
+		if(ele != null){
+			String fullManagerID = ele.getText();
+			
+			String[] managerID = fullManagerID.split(":");
+			
+			String displayText = managerID[1];
+			System.out.println(displayText);
+			
+			assertEquals(displayText.substring(1, 5), "mngr");
+			
+			System.out.println("displayText.substring(6, displayText.length()- 6)" + displayText.substring(6, displayText.length()- 4));
+			assertTrue(displayText.substring(6, displayText.length()-4).matches("[0-9]+"));
+		}		
+	}
+
+	public void enterUserNameWithParameter(String username){
+		loginPL = PageFactory.initElements(driver,Login_Page_Locator.class);
+		ele = loginPL.getUserName();
+		
+		if(ele != null){
+			WebTextBox.enterKeys(ele, username);
+		}
+	}
+	
+	public void enterPasswordWithParameter(String password){
+		loginPL = PageFactory.initElements(driver, Login_Page_Locator.class);
+		ele = loginPL.getPassword();
+		
+		if(ele != null){
+			WebTextBox.enterKeys(ele, password);
+		}
+	}
 }

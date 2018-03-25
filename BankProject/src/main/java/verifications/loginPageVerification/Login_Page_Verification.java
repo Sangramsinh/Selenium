@@ -25,11 +25,12 @@ public class Login_Page_Verification {
 		loginPA.enterPassword();
 		loginPA.verifyPassword();
 		loginPA.loginButtonClick();
+		loginPA.verifyManagerID();
 		homePV = new Home_Page_Verification(driver);
 		return homePV;
 	}
 	
-	public void verifyInvalidUserName(){
+	public void verifyInvalidUserName() {
 		loginPA = new Login_Page_Action(driver);
 		loginPA.verifyUserNameIsNull();
 		loginPA.enterInvalidUserName();
@@ -38,7 +39,9 @@ public class Login_Page_Verification {
 		loginPA.verifyPassword();
 		loginPA.loginButtonClick();
 		loginPA.handleAlert();
+		System.out.println("driver title"+driver.getTitle());
 		loginPA.verifyLoginPageTitle();
+		System.out.println("driver title"+driver.getTitle());
 	}
 	
 	public void verifyInvalidPassword(){
@@ -56,11 +59,22 @@ public class Login_Page_Verification {
 	public void verifyInvalidUserNameAndPassword(){
 		loginPA = new Login_Page_Action(driver);
 		loginPA.verifyUserNameIsNull();
-		loginPA.enterInvalidPassword();
+		loginPA.enterInvalidUserName();
 		loginPA.verifyPasswordIsNull();
 		loginPA.enterInvalidPassword();
 		loginPA.loginButtonClick();
 		loginPA.handleAlert();
 		loginPA.verifyLoginPageTitle();
+	}
+	
+	public void verifyLoginWithParameters(String username,String password){
+		loginPA = new Login_Page_Action(driver);
+		loginPA.verifyUserNameIsNull();
+		loginPA.enterUserNameWithParameter(username);
+		loginPA.verifyUserName();
+		loginPA.verifyPasswordIsNull();
+		loginPA.enterPasswordWithParameter(password);
+		loginPA.verifyPassword();
+		loginPA.loginButtonClick();		
 	}	
 }

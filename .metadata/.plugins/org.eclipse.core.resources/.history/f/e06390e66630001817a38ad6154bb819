@@ -1,0 +1,9 @@
+package componentFunctions;
+
+import org.testng.annotations.Test;
+
+public class DataProviderClass {
+  @Test
+  public void f() {
+  }
+}

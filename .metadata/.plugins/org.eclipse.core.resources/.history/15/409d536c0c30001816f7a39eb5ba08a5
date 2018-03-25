@@ -1,0 +1,100 @@
+package componentFunctions;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Enumeration;
+import java.util.Properties;
+
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class GetPropertyValue {
+	String result = "";
+	InputStream inputStream = null;
+	String sheetName = "BankProjectSheet";
+
+	public String getPropertyValues(String fileName,String keyToSearch){
+		
+		if(fileName.equalsIgnoreCase("config.properties"))
+		{
+			try {
+				Properties prop = new Properties();
+				
+				inputStream = new FileInputStream(fileName);
+				
+				if(inputStream != null){
+					prop.load(inputStream);
+				}else{
+					throw new FileNotFoundException("Property file " + fileName + "not found ");
+				}
+				
+				Enumeration<?> e = prop.propertyNames();
+				
+				while(e.hasMoreElements()){
+					String key = (String) e.nextElement();
+					String value = prop.getProperty(key);
+					if(key.equals(keyToSearch)){
+						result = value;
+						break;
+					}
+				}			
+			} catch (IOException e) {
+				System.out.println("Exception : " + e);
+			}			
+		}
+		else if(fileName.equalsIgnoreCase("TestData.xlsx")){
+			
+			try {
+				inputStream = new FileInputStream(fileName);
+				
+				
+				if(inputStream != null){
+					
+					//Create instance of Workbook
+					Workbook bankProjectWorkbook = null;
+					
+					String findExtensionName = fileName.substring(fileName.indexOf("."));
+					
+					//Create object for xlsx file
+					if(findExtensionName.equals(".xlsx")){
+						System.out.println("Inside xlsx ");
+						bankProjectWorkbook = new XSSFWorkbook(inputStream);
+					}
+					//Create object for xls file
+					else if(findExtensionName.equals(".xls")){
+						bankProjectWorkbook = new HSSFWorkbook(inputStream);
+					}
+					
+					//Read sheet inside file
+					 Sheet bankProjectSheet = bankProjectWorkbook.getSheet(sheetName);
+					 
+					 //Count no of rows in sheet
+					 int rowCount = bankProjectSheet.getLastRowNum() - bankProjectSheet.getFirstRowNum();
+					 
+					 for(int index = 0;index <= rowCount;index ++){
+						 Row row = bankProjectSheet.getRow(index);
+						 
+						 if(row.getCell(1).getStringCellValue().equalsIgnoreCase(keyToSearch)){
+							 result = row.getCell(2).getStringCellValue();
+							 break;
+						 }
+					 }
+					 
+				}else{
+				throw new FileNotFoundException("File" + fileName + "not found");				
+				}
+			}
+			 catch (IOException e) {
+				System.out.println(e);
+			}
+			
+		}
+		return result;
+		}
+	
+}
